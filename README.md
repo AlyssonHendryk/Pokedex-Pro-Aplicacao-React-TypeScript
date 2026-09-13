@@ -1,2 +1,2 @@
-# Pok-dex-Pro-Aplica-o-React-TypeScript
+# Pokedex-Pro-Aplicação-React-TypeScript
 Desafio Técnico Frontend Júnior — Pokédex Pro 
