@@ -1,7 +1,17 @@
+import Header from "./header/logo"
+import './App.css'
+import '../form/searchInput'
+import '../form/searchInput'
+
 export default function App() {
     return (
-        <div className="div">
-            <h1>teste do projeto</h1>
+        <div className="main">
+            <Header/>
+            <main>
+                <div id="search-input">
+
+                </div>
+            </main>
         </div>
     )
 }
