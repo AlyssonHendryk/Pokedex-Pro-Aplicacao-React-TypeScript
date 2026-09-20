@@ -1,0 +1,58 @@
+.pokemon-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(180px, 1fr));
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+
+.pokemon-card {
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+
+.pokemon-card img {
+  width: 140px;
+  height: 140px;
+
+  object-fit: contain;
+}
+
+
+.pokemon-card h2 {
+  text-transform: capitalize;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 30px 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
