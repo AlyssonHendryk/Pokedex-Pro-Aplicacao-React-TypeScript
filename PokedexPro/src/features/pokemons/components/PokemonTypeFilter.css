@@ -1,0 +1,135 @@
+.search-container select {
+    width: 190px;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.search-container select:focus {
+    border-color: #dc3545;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+
+/* Modo escuro */
+
+.main.dark .search-container select {
+    background-color: #1f1f1f;
+
+    border-color: #3a3a3a;
+
+    color: #f1f1f1;
+}
+
+
+.main.dark .search-container select:focus {
+    border-color: #dc3545;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+
+.main.dark .search-container select option {
+    background-color: #1f1f1f;
+
+    color: #f1f1f1;
+}
+
+
+@media (max-width: 600px) {
+
+    .search-container select {
+        width: 100%;
+    }
+
+}.search-container select {
+    width: 190px;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.search-container select:focus {
+    border-color: #dc3545;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+
+/* Modo escuro */
+
+.main.dark .search-container select {
+    background-color: #1f1f1f;
+
+    border-color: #3a3a3a;
+
+    color: #f1f1f1;
+}
+
+
+.main.dark .search-container select:focus {
+    border-color: #dc3545;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+
+.main.dark .search-container select option {
+    background-color: #1f1f1f;
+
+    color: #f1f1f1;
+}
+
+
+@media (max-width: 600px) {
+
+    .search-container select {
+        width: 100%;
+    }
+
+}

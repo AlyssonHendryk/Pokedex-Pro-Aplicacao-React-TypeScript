@@ -1,36 +1,49 @@
+import "./Pagination.css";
+
+
 interface PaginationProps {
-  page: number;
-  onPrevious: () => void;
-  onNext: () => void;
+    page: number;
+    totalPages: number;
+    onPrevious: () => void;
+    onNext: () => void;
 }
 
+
 export function Pagination({
-  page,
-  onPrevious,
-  onNext
+    page,
+    totalPages,
+    onPrevious,
+    onNext
 }: PaginationProps) {
-  return (
-    <div className="pagination">
 
-      <button
-        type="button"
-        onClick={onPrevious}
-        disabled={page === 1}
-      >
-        Anterior
-      </button>
+    return (
 
-      <span>
-        Página {page}
-      </span>
+        <div className="pagination">
 
-      <button
-        type="button"
-        onClick={onNext}
-      >
-        Próximo
-      </button>
+            <button
+                type="button"
+                onClick={onPrevious}
+                disabled={page === 1}
+            >
+                Anterior
+            </button>
 
-    </div>
-  );
+
+            <span>
+                Página {page} de {totalPages}
+            </span>
+
+
+            <button
+                type="button"
+                onClick={onNext}
+                disabled={page === totalPages}
+            >
+                Próximo
+            </button>
+
+        </div>
+
+    );
+
 }

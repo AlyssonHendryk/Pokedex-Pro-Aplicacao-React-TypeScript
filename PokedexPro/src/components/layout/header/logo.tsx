@@ -1,14 +1,56 @@
-import logoImg from '../../../assets/pokedexlogo.png';
+import logoImg from "../../../assets/pokedexlogo.png";
 
-function Header() {
-  return (
-    <header className="main-header" style={{ display: 'flex', padding: '10px 20px', height: '61px', width: 'auto', objectFit: 'contain' }}>
-      <img src={logoImg} alt="site logotype" className="header-logo" style={{ cursor: 'pointer' }} />
-      <div className='centralized-container' style={{ display: 'flex', padding: '136px 270px', height: '140px', width: 'auto', objectFit: 'contain', justifyContent: 'center', alignItems: 'center' }}>
-        <img src={logoImg} alt="site main image" className='main-logo' />
-      </div>
-    </header>
-  );
+import "./logo.css";
+
+
+interface HeaderProps {
+    darkMode: boolean;
+    onToggleTheme: () => void;
 }
+
+
+function Header({
+    darkMode,
+    onToggleTheme
+}: HeaderProps) {
+
+    return (
+
+        <header className="main-header">
+
+            <img
+                src={logoImg}
+                alt="Pokédex"
+                className="header-logo"
+            />
+
+
+            {/* Botão para trocar o tema */}
+            <button
+                className="theme-button"
+                type="button"
+                onClick={onToggleTheme}
+                aria-label={
+                    darkMode
+                        ? "Ativar modo claro"
+                        : "Ativar modo escuro"
+                }
+                title={
+                    darkMode
+                        ? "Modo claro"
+                        : "Modo escuro"
+                }
+            >
+
+                {darkMode ? "☀️" : "🌙"}
+
+            </button>
+
+        </header>
+
+    );
+
+}
+
 
 export default Header;

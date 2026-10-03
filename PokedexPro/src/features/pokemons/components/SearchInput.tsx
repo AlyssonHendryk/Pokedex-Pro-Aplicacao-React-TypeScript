@@ -1,3 +1,5 @@
+import "./SearchInput.css";
+
 interface SearchInputProps {
   value: string;
   onChange: (value: string) => void;
@@ -17,4 +19,3 @@ export function SearchInput({
     />
   );
 }
-
