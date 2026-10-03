@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./PokemonTypeFilter.css";
 import type { PokemonType } from "../types/pokemon";
 
 import {
@@ -32,7 +32,16 @@ export function PokemonTypeFilter({
           await fetchPokemonTypes();
 
 
-        setTypes(data.results);
+        // Remove tipos que não são usados no filtro
+        const filteredTypes =
+          data.results.filter(
+            (type) =>
+              type.name !== "unknown" &&
+              type.name !== "shadow"
+          );
+
+
+        setTypes(filteredTypes);
 
       } catch (error) {
 

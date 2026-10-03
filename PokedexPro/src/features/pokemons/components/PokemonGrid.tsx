@@ -1,28 +1,41 @@
 import type { Pokemon } from "../types/pokemon";
-import { PokemonCard } from "./PokemonCard";
+import "./PokemonGrid.css";
+import {
+    PokemonCard
+} from "./PokemonCard";
 
 
 interface PokemonGridProps {
-  pokemons: Pokemon[];
+    pokemons: Pokemon[];
+
+    onPokemonClick: (
+        pokemon: Pokemon
+    ) => void;
 }
 
 
 export function PokemonGrid({
-  pokemons
+    pokemons,
+    onPokemonClick
 }: PokemonGridProps) {
 
-  return (
-    <section className="pokemon-grid">
+    return (
 
-      {pokemons.map((pokemon) => (
+        <section className="pokemon-grid">
 
-        <PokemonCard
-          key={pokemon.id}
-          pokemon={pokemon}
-        />
+            {pokemons.map(
+                (pokemon) => (
 
-      ))}
+                    <PokemonCard
+                        key={pokemon.id}
+                        pokemon={pokemon}
+                        onClick={onPokemonClick}
+                    />
 
-    </section>
-  );
+                )
+            )}
+
+        </section>
+
+    );
 }

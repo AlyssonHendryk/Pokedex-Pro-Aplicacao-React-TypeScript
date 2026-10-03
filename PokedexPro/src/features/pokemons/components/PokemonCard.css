@@ -1,0 +1,161 @@
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 24px 20px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.3s ease;
+}
+
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #dddddd;
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.pokemon-card img {
+    width: 150px;
+    height: 150px;
+
+    margin-bottom: 10px;
+
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+
+.pokemon-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.pokemon-card > span {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #8a8a8a;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Nome */
+
+.pokemon-card h2 {
+    margin: 5px 0 12px;
+
+    font-size: 20px;
+
+    color: #222222;
+
+    text-transform: capitalize;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Tipos */
+
+.pokemon-card-types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.pokemon-card-types span {
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    text-transform: capitalize;
+}
+
+
+/* ========================= */
+/* Modo escuro               */
+/* ========================= */
+
+.main.dark .pokemon-card {
+    background-color: #1f1f1f;
+
+    border-color: #303030;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+.main.dark .pokemon-card:hover {
+    border-color: #484848;
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+.main.dark .pokemon-card > span {
+    color: #aaaaaa;
+}
+
+
+.main.dark .pokemon-card h2 {
+    color: #f1f1f1;
+}
+
+
+@media (max-width: 600px) {
+
+    .pokemon-card {
+        min-height: 230px;
+
+        padding: 18px 12px;
+    }
+
+
+    .pokemon-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .pokemon-card h2 {
+        font-size: 18px;
+    }
+
+}
